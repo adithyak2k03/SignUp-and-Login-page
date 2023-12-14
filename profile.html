@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- You can include your custom CSS file here -->
+  <!-- <link rel="stylesheet" href="css/profile.css"> -->
+</head>
+<body>
+
+<div class="container mt-5">
+  <h2>User Profile</h2>
+  <form id="profileForm">
+    <div class="form-group">
+      <label for="age">Age</label>
+      <input type="number" class="form-control" id="age" placeholder="Enter age">
+    </div>
+    <div class="form-group">
+      <label for="dob">Date of Birth</label>
+      <input type="date" class="form-control" id="dob">
+    </div>
+    <div class="form-group">
+      <label for="contact">Contact</label>
+      <input type="text" class="form-control" id="contact" placeholder="Enter contact information">
+    </div>
+    <!-- You can add more fields for the profile here -->
+
+    <button type="submit" class="btn btn-primary">Save Profile</button>
+  </form>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="profile.js"></script>
+</body>
+</html>
