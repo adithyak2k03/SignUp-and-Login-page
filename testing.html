@@ -8,41 +8,44 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <h2 id="profileheading" class="text-center">User Profile</h2>
+    <div class="container">
+        <h2 id="profileheading" class="text-center">User Profile</h2>
+        
+        <form id="registrationForm" class="border p-4">
+            <div class="form-group">
+                <label for="firstname">First Name:</label>
+                <input type="text" class="form-control" id="firstname" name="firstname" required>
+            </div>
     
-    <form id="registrationForm" class="border p-4">
-        <div class="form-group">
-            <label for="firstname">First Name:</label>
-            <input type="text" class="form-control" id="firstname" name="firstname" required>
-        </div>
+            <div class="form-group">
+                <label for="lastname">Last Name:</label>
+                <input type="text" class="form-control" id="lastname" name="lastname" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" class="form-control" id="dob" name="dob" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" class="form-control" id="age" name="age" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="contact">Contact:</label>
+                <input type="number" class="form-control" id="contact" name="contact">
+            </div>
+    
+            <div class="d-flex justify-content-between">
+                <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                <button type="button" class="btn btn-danger">Log out</button>
+            </div>
+        </form>
+    </div>
 
-        <div class="form-group">
-            <label for="lastname">Last Name:</label>
-            <input type="text" class="form-control" id="lastname" name="lastname" required>
-        </div>
-
-        <div class="form-group">
-            <label for="dob">Date of Birth:</label>
-            <input type="date" class="form-control" id="dob" name="dob" required>
-        </div>
-
-        <div class="form-group">
-            <label for="age">Age:</label>
-            <input type="number" class="form-control" id="age" name="age" required>
-        </div>
-
-        <div class="form-group">
-            <label for="contact">Contact:</label>
-            <input type="tel" class="form-control" id="contact" name="contact">
-        </div>
-
-        <button type="submit" class="btn btn-primary btn-block">Submit</button>
-        <div class="mt-3 text-center"></div>
-    </form>
-
-    <button type="button" class="btn btn-primary btn-block" onclick="logOut()">Log out</button>
-
-    <!-- Bootstrap JS (optional, if needed) -->
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -10,7 +10,7 @@ function updateUser() {
     // alert(firstname + lastname);  
     // console.log("ooooooooooooooooo",);  
 
-    alert("updating userr....");
+    alert("Updated User details");
     $.ajax({
         type: 'POST',
         url: 'profile_user.php',

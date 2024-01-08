@@ -10,14 +10,22 @@ function loginUser() {
             password: password
         },
         success: function(response) {
-            localStorage.setItem("token",username);
-            // window.location.href = 'profile.html';
-            console.log("helo",response);
-            if (response.trim() === "success") {
-                // window.location.href = 'profile.html';
+            var jsonResponse = JSON.parse(response);
+            // console.log(">>>>>>>>>>",response);
+            
+            if (jsonResponse.status === "success") {
+                localStorage.setItem("token", username);
+                window.location.href = 'profile.html';
             } else {
-                $('#response').html(response);
+                alert("Invalid username or password!")
+                $('#response').html(jsonResponse.message);
+                window.location.href = 'index.html';
             }
+        },
+        error: function(xhr, status, error) {
+            console.error(xhr.responseText);
+            $('#response').html('Error: Unable to process the request.');
+            window.location.href = 'index.html';
         }
     });
 }

@@ -26,13 +26,17 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     $_SESSION['username'] = $username;
+    $response = array('status' => 'success');
     // header("Location: profile.html");
-    return true;
 } 
 else {
-    echo "Invalid username or password!";
-    return false;
+    // echo "Invalid username or password!";
+    $response = array('status' => 'error');
+
+    // header("Location: index.html");
 }
 
+// echo '<span style="display: none;">This text will be hidden on the webpage</span>';
+echo json_encode($response);
 $conn->close();
 ?>

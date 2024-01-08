@@ -57,11 +57,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
      // Add more fields as needed
  }
 
+// if ($conn->query($sql) === TRUE) {
+//     // echo "User registered successfully!";
+//     $response = array('status' => 'success');
+//     // header("Location: index.html");
+//     header('Location: index.html');
+    
+
+// } else {
+//     $response = array('status' => 'error');
+//     echo "Error: " . $sql . "<br>" . $conn->error;
+// }
+// echo json_encode($response);
+
 if ($conn->query($sql) === TRUE) {
-    echo "User registered successfully!";
+    $response = array('status' => 'success');
 } else {
+    $response = array('status' => 'error');
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
+echo json_encode($response);
+
 $conn->close();
+
 ?>

@@ -1,3 +1,12 @@
+
+$(document).ready(function() {
+    $('#registerbutton').on('click', function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // registerUser(); // Call the registerUser function
+    });
+});
+
 function registerUser() {
     var firstname = $('#firstname').val();
     var lastname = $('#lastname').val();
@@ -5,8 +14,10 @@ function registerUser() {
     var password = $('#password').val();
 
     // alert("Registering user...");
-    alert(firstname + lastname);  
-    // console.log("ooooooooooooooooo",);  
+    // alert(firstname + lastname);
+        // console.log("ooooooooooooooooo",);  
+
+    
 
     $.ajax({
         type: 'POST',
@@ -18,7 +29,8 @@ function registerUser() {
             password: password
         },
         success: function(response) {
-            // alert(username);
+            alert("Successfully Registered!");
+            window.location.href = 'index.html';
             $('#response').html(response);
             // console.log("ooooooooooooooooo");
             
