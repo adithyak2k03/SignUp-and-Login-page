@@ -1,32 +1,27 @@
-$(document).ready(function() {
-    $('#registerForm').submit(function(event) {
-      event.preventDefault();
-  
-      // Gather input values
-      var fullName = $('#fullName').val();
-      var email = $('#email').val();
-      var password = $('#password').val();
-  
-      // AJAX call to register.php (replace with your backend endpoint)
-      $.ajax({
+function registerUser() {
+    var firstname = $('#firstname').val();
+    var lastname = $('#lastname').val();
+    var username = $('#username').val();
+    var password = $('#password').val();
+
+    // alert("Registering user...");
+    alert(firstname + lastname);  
+    // console.log("ooooooooooooooooo",);  
+
+    $.ajax({
         type: 'POST',
-        url: 'register.php',
+        url: 'register_user.php',
         data: {
-          fullName: fullName,
-          email: email,
-          password: password
+            firstname: firstname,
+            lastname: lastname,
+            username: username,
+            password: password
         },
         success: function(response) {
-          // Handle successful registration response
-          console.log('Registration successful:', response);
-          // You can show a success message or redirect to a login page upon successful registration
-        },
-        error: function(xhr, status, error) {
-          // Handle error cases
-          console.error('Registration error:', error);
-          // You can display an error message to the user
+            // alert(username);
+            $('#response').html(response);
+            // console.log("ooooooooooooooooo");
+            
         }
-      });
     });
-  });
-  
+}
