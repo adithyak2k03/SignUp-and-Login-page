@@ -1,11 +1,11 @@
 # SignUp-and-Login-page
 Guvi task . Tech Stack: HTML,CSS,JS, PHP, MongoDB, MySQL
 
-Login, Sign up, Profile page created using HTML, CSS(Bootstrap) and JS.
-Jquery AJAX is used to interact with the backend.
-MySQL is used to store user registration details.
-MongoDB is used to store user profile details.
-Login Session is maintained using LocalStorage.
+Login, Sign up, Profile page created using HTML, CSS(Bootstrap) and JS.<br>
+Jquery AJAX is used to interact with the backend.<br>
+MySQL is used to store user registration details.<br>
+MongoDB is used to store user profile details.<br>
+Login Session is maintained using LocalStorage.<br>
 
 
 Demo
